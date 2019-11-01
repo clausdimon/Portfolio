@@ -1,0 +1,62 @@
+/*makes a topnav as a link place to links to other sites*/
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    width:100%;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/*sets a link to be active if that's the page you're on*/
+.active {
+    background-color:#4caf50;
+}
+header {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+/* makes colems a certain size*/
+.colum {
+    float:left;
+    width: 30%;
+    padding:1%;
+    border:0px;
+}
+.columv2 {
+    float:left;
+    width: 48%;
+    padding:1%;
+    border:0px;
+}
+/* affect after a row*/
+.row:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+img {
+    width: 100%;
+    height: auto;
+
+}
+.title {
+    width: 100%;
+    color:blue;
+    font-size:2em;
+}
