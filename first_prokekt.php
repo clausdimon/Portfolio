@@ -4,7 +4,7 @@
     if ($conn->connect_error) {
         die("Connection failed;" . $conn->connect_error);
     }
-    $sql = "SELECT*FROM portfolio_projekter ORDER BY ID ASC LIMIT 1";
+    $sql = "SELECT*FROM portfolio_projekter ORDER BY ID DESC LIMIT 1";
     $result = $conn->query($sql);
     $list = array();
     while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
