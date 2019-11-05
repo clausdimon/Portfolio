@@ -51,7 +51,7 @@ header {
     clear:both;
 }
 img {
-    width: 100%;
+    width: 25%;
     height: auto;
 
 }
@@ -59,4 +59,23 @@ img {
     width: 100%;
     color:blue;
     font-size:2em;
+}
+.overskrift {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    color: cadetblue;
+}
+.picture_side {
+    float: left;
+    width: 35%;
+    border: 5px solid greenyellow;
+    padding: 0 1%;
+    margin-right: 5%;
+}
+.text_side {
+    float: left;
+    width: 50%;
+    padding: 0 1%;
+    border: 5px solid greenyellow;
 }

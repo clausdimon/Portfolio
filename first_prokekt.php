@@ -16,5 +16,5 @@
             'all' => $row['Hole-text']
         );
     }
-    echo json_encode($list)
+    echo json_encode($list);
 ?>
