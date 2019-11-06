@@ -44,20 +44,17 @@ $true_list = list($id, $Title, $resume, $Picture, $all)= $list;
         <div class="row">
             <div class="colum">
                 <p><b>Made by</b>: Claus N. Dimon</p>
+                <p>&copy;<?php
+                    $fromYear = 2019; 
+                    $thisYear = (int)date('Y'); 
+                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio
+                </p>
             </div>
             <div class="colum">
                 <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+4581754402</a></p>
             </div>
             <div class="colum">
                 <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="colum">
-                <p>&copy;<?php
-                    $fromYear = 2019; 
-                    $thisYear = (int)date('Y'); 
-                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio</p>
             </div>
         </div>
     </footer>

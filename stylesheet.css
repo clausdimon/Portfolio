@@ -51,7 +51,7 @@ header {
     clear:both;
 }
 img {
-    width: 25%;
+    width: 40%;
     height: auto;
 
 }
@@ -78,4 +78,14 @@ img {
     width: 50%;
     padding: 0 1%;
     border: 5px solid greenyellow;
+}
+.texttitle {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+a.download {
+    border: 3px darkred dashed;
+    padding: 2px;
+    margin: 5px;
 }

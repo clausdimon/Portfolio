@@ -22,8 +22,7 @@
     <br>
     <div class="row">
         <div class="picture_side">
-            <img src="Migselv.jpg" alt="Error.png" style="width: 75%;">
-            <br>
+            <img src="picture/Migselv.jpg" alt="picture/Error.png" style="width: 75%;">
         </div>
         <div class="text_side">
             <div>
@@ -31,28 +30,40 @@
                 <p>grundlæggende</p>
             </div>
             <div>
-                <a href="CV.pdf">CV som pdf</a>
+                <a href="CV.pdf" class="download">CV som pdf</a>
             </div>
+            <br>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="picture_side" style="height:200px;">
+            <h3 class="texttitle"><b>Current Workplace</b></h3>
+            <p style="text-align: center; display: inline-block; width:100%;">SDE Munkebjergvej, 5000 Odense C</p>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="picture_side" style="height:200px;">
+            <h3 class="texttitle"><b>available for Hiring</b></h3>
+            <p style="text-align: center; display: inline-block; width:100%;"> Yes</p>
         </div>
     </div>
     <footer>
         <div class="row">
             <div class="colum">
                 <p><b>Made by</b>: Claus N. Dimon</p>
+                <p>&copy;<?php
+                    $fromYear = 2019; 
+                    $thisYear = (int)date('Y'); 
+                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio
+                </p>
             </div>
             <div class="colum">
                 <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+4581754402</a></p>
             </div>
             <div class="colum">
                 <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="colum">
-                <p>&copy;<?php
-                    $fromYear = 2019; 
-                    $thisYear = (int)date('Y'); 
-                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio</p>
             </div>
         </div>
     </footer>

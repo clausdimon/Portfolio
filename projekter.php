@@ -44,7 +44,7 @@
                                const blobUrl = URL.createObjectURL(obj.Picture);
                                pic.src = blobUrl;
                                var link = document.createElement("a");
-                               link.href = "#";
+                               link.href = "single_projekt.php?ID="+ obj.id;
                                link.innerHTML = "det hele";
                                link.target = "_blank";
                                divcolpic.appendChild(img);
@@ -57,27 +57,24 @@
                            });
                        }
                    });
-              )});
+              });
         </script>
     </div>
     <footer>
         <div class="row">
             <div class="colum">
                 <p><b>Made by</b>: Claus Dimon</p>
+                <p>&copy;<?php
+                    $fromYear = 2019; 
+                    $thisYear = (int)date('Y'); 
+                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio
+                </p>
             </div>
             <div class="colum">
                 <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+4581754402</a></p>
             </div>
             <div class="colum">
                 <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="colum">
-                <p>&copy;<?php
-                    $fromYear = 2019; 
-                    $thisYear = (int)date('Y'); 
-                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio</p>
             </div>
         </div>
     </footer>
