@@ -111,32 +111,6 @@ require("mysqlconnect.php");
                 divCol1.appendChild(link);
                 document.getElementById("first_projekt").appendChild(divCol);
                 document.getElementById("first_projekt").appendChild(divCol1);
-                /* for(x in myObj)
-                {
-                    var divCol = document.createElement("div");
-                    var divCol1 = document.createElement("div");
-                    divCol.classList.add("columv2");
-                    divCol1.classList.add("columv2");
-
-                    var titles = document.createElement("h4");
-                    titles.classList.add("title");
-                    titles.innerHTML = myObj[x].Title;
-                    var resume = document.createElement("p");
-                    resume.innerHTML = myObj[x].resume;
-                    var pic = document.createElement("img");
-                    pic.src = myObj[x].Picture;
-                    var link = document.createElement("a");
-                    link.href = "single_projekt.php?ID="+ myObj[x].id;
-                    link.innerHTML = "det hele";
-                    link.target = "_blank";
-                    divCol.appendChild(pic);
-                    divCol1.appendChild(titles);
-                    divCol1.appendChild(resume);
-                    divCol1.appendChild(link);
-                    document.getElementById("first_projekt").appendChild(divCol);
-                    document.getElementById("first_projekt").appendChild(divCol1);
-
-                } */
             }
         };
         xmlhttp.open("GET","first_projekt.php",true);
@@ -172,32 +146,6 @@ require("mysqlconnect.php");
                 divCol1.appendChild(link);
                 document.getElementById("bedste_projekt").appendChild(divCol);
                 document.getElementById("bedste_projekt").appendChild(divCol1);
-                /* for(x in myObj)
-                {
-                    var divCol = document.createElement("div");
-                    var divCol1 = document.createElement("div");
-                    divCol.classList.add("columv2");
-                    divCol1.classList.add("columv2");
-
-                    var titles = document.createElement("h4");
-                    titles.classList.add("title");
-                    titles.innerHTML = myObj[x].Title;
-                    var resume = document.createElement("p");
-                    resume.innerHTML = myObj[x].resume;
-                    var pic = document.createElement("img");
-                    pic.src = myObj[x].Picture;
-                    var link = document.createElement("a");
-                    link.href = "single_projekt.php?ID="+ myObj[x].id;
-                    link.innerHTML = "det hele";
-                    link.target = "_blank";
-                    divCol.appendChild(pic);
-                    divCol1.appendChild(titles);
-                    divCol1.appendChild(resume);
-                    divCol1.appendChild(link);
-                    document.getElementById("first_projekt").appendChild(divCol);
-                    document.getElementById("first_projekt").appendChild(divCol1);
-
-                } */
             }
         };
         xmlhttp.open("GET","random_projekt.php",true);
@@ -232,32 +180,6 @@ require("mysqlconnect.php");
                 divCol1.appendChild(link);
                 document.getElementById("seneste_projekts").appendChild(divCol);
                 document.getElementById("seneste_projekts").appendChild(divCol1);
-                /* for(x in myObj)
-                {
-                    var divCol = document.createElement("div");
-                    var divCol1 = document.createElement("div");
-                    divCol.classList.add("columv2");
-                    divCol1.classList.add("columv2");
-
-                    var titles = document.createElement("h4");
-                    titles.classList.add("title");
-                    titles.innerHTML = myObj[x].Title;
-                    var resume = document.createElement("p");
-                    resume.innerHTML = myObj[x].resume;
-                    var pic = document.createElement("img");
-                    pic.src = myObj[x].Picture;
-                    var link = document.createElement("a");
-                    link.href = "single_projekt.php?ID="+ myObj[x].id;
-                    link.innerHTML = "det hele";
-                    link.target = "_blank";
-                    divCol.appendChild(pic);
-                    divCol1.appendChild(titles);
-                    divCol1.appendChild(resume);
-                    divCol1.appendChild(link);
-                    document.getElementById("first_projekt").appendChild(divCol);
-                    document.getElementById("first_projekt").appendChild(divCol1);
-
-                } */
             }
         };
         xmlhttp.open("GET","seneste_projekt.php",true);
