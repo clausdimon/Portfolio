@@ -19,46 +19,8 @@
     <div>
         <h2 class="overskrift">Projekter</h2>
     </div>
-    <div id="projekter" class="row">
-        <script>
-               $(window).ready(function(e){
-                   $.ajax({
-                       url : "all_projekts.php",
-                       type : "post",
-                       datatype : "json",
-                       succes : function(list){
-                           var divCol = document.createElement("div");
-                           divCol.classList.add("columv2");
-                           var divcolpic = document.createElement("div");
-                           divcolpic.classLists.add("columv2");
-                           var divColTxt =document.createElement("div");
-                           divColTxt.classLists.add("columv2");
-
-                           list.foreach(function(obj, index){
-                               var titles = document.createElement("h4");
-                               titles.classList.add("title");
-                               titles.innerHTML = obj.Title;
-                               var resume = document.createElement("p");
-                               resume.innerHTML= obj.Resume;
-                               var pic = document.createElement("img");
-                               const blobUrl = URL.createObjectURL(obj.Picture);
-                               pic.src = blobUrl;
-                               var link = document.createElement("a");
-                               link.href = "single_projekt.php?ID="+ obj.id;
-                               link.innerHTML = "det hele";
-                               link.target = "_blank";
-                               divcolpic.appendChild(img);
-                               divColTxt.appendChild(titles);
-                               divColTxt.appendChild(resume);
-                               divColTxt.appendChild(link);
-                               divCol.appendChild(divcolpic);
-                               divCol.appendChild(divColTxt);
-                               $("#projekter").appendChild(divCol);
-                           });
-                       }
-                   });
-              });
-        </script>
+    <div class="row" id="projekter">
+        
     </div>
     <footer>
         <div class="row">
@@ -78,5 +40,46 @@
             </div>
         </div>
     </footer>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var myObj, x;
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+                myObj = JSON.parse(this.responseText);
+                for(x in myObj)
+                {
+                    var divrow = document.createElement("div");
+                    var divCol = document.createElement("div");
+                    var divCol1 = document.createElement("div");
+                    divrow.classList.add("columv2");
+                    divCol.classList.add("columv2");
+                    divCol1.classList.add("columv2");
+
+                    var titles = document.createElement("h4");
+                    titles.classList.add("title");
+                    titles.innerHTML = myObj[x].Title;
+                    var resume = document.createElement("p");
+                    resume.innerHTML = myObj[x].Resume;
+                    var pic = document.createElement("img");
+                    pic.src = myObj[x].Picture;
+                    var link = document.createElement("a");
+                    link.href = "single_projekt.php?ID="+ myObj[x].ID;
+                    link.innerHTML = "det hele";
+                    link.target = "_blank";
+                    divCol.appendChild(pic);
+                    divCol1.appendChild(titles);
+                    divCol1.appendChild(resume);
+                    divCol1.appendChild(link);
+                    divrow.appendChild(divCol);
+                    divrow.appendChild(divCol1);
+                    document.getElementById("projekter").appendChild(divrow);
+
+                }
+            }
+        };
+        xmlhttp.open("GET","all_projekts.php",true);
+        xmlhttp.send();
+    </script>
 </body>
 </html>

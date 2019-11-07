@@ -1,6 +1,5 @@
 <?php
 $ID = $_GET['ID'];
-echo "ID: ". $ID;
 require("mysqlconnect.php");
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -15,10 +14,9 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
         'Title' => $row["Title"],
         'Resume' => $row["Resume"],
         'Picture' => $row['Picture'],
-        'all' => $row['Hole-text']
+        'all' => $row['Hole_text']
     );
 }
-$true_list = list($id, $Title, $resume, $Picture, $all)= $list;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,15 +28,15 @@ $true_list = list($id, $Title, $resume, $Picture, $all)= $list;
 </head>
 <body>
     <Header>
-        <h1 id="title"><?php echo $true_list.Title;?></h1>
+        <h1 id="title"><?php echo $list['Title'];?></h1>
     </Header>
     <br>
     <div>
-        <img src="<?php URL.createObjectURL($true_list.Picture);?>" alt="Error.png" id="picture">
+        <img src="<?php echo $list['Picture'];?>" alt="picture not found" id="picture">
         <br>
-        <p id="om_projekt"><?php echo $true_list.resume;?></p>
+        <p id="om_projekt"><?php echo $list['Resume'];?></p>
         <br>
-        <p id="done_projekt"> <?php echo $true_list.all;?></p>
+        <p id="done_projekt"> <?php echo $list['all'];?></p>
     </div>
     <footer>
         <div class="row">
@@ -51,12 +49,13 @@ $true_list = list($id, $Title, $resume, $Picture, $all)= $list;
                 </p>
             </div>
             <div class="colum">
-                <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+4581754402</a></p>
+                <p><b>Contact Phonenr</b>: <a href="tel:+45 81 75 44 02">+4581754402</a></p>
             </div>
             <div class="colum">
                 <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
             </div>
         </div>
     </footer>
+    <script></script>
 </body>
 </html>

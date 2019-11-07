@@ -13,7 +13,7 @@
             'Title' => $row["Title"],
             'Resume' => $row["Resume"],
             'Picture' => $row['Picture'],
-            'all' => $row['Hole-text']
+            'all' => $row['Hole_text']
         );
     }
     echo json_encode($list);

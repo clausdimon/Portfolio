@@ -7,14 +7,15 @@
     $sql = "SELECT*FROM portfolio_projekter";
     $result = $conn->query($sql);
     $list = array();
-    while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-        $list = array(
-            'id' => $row['ID'],
-            'Title' => $row["Title"],
-            'Resume' => $row["Resume"],
+    while($row=$result->fetch_assoc()){
+        $list[] = $row; 
+            /* 'id' => $row['ID'],
+            'Title' => $row['Title'],
+            'Resume' => $row['Resume'],
             'Picture' => $row['Picture'],
-            'all' => $row['Hole-text']
-        );
+            'all' => $row['Hole_text']     */
+        //)
+    //);
     }
     echo json_encode($list);
 ?>
