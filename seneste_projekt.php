@@ -10,10 +10,10 @@
     while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
         $list = array(
             'id' => $row['ID'],
-            'Title' => $row["Title"],
-            'Resume' => $row["Resume"],
-            'Picture' => $row['Picture'],
-            'all' => $row['Hole_text']
+        'Title' => $row["Title"],
+        'Resume' => utf8_encode($row["Resume"]),
+        'Picture' => $row['Picture'],
+        'all' => utf8_encode($row['Hole_text'])
         );
     }
     echo json_encode($list);

@@ -8,13 +8,14 @@
     $result = $conn->query($sql);
     $list = array();
     while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-        $list = array(
+         $list = array(
             'id' => $row['ID'],
             'Title' => $row["Title"],
-            'Resume' => $row["Resume"],
+            'Resume' => utf8_encode($row["Resume"]),
             'Picture' => $row['Picture'],
-            'all' => $row['Hole_text']
+            'all' => utf8_encode($row['Hole_text'])
         );
     }
-    echo json_encode($list);
+    $json = json_encode($list);
+    echo $json;
 ?>

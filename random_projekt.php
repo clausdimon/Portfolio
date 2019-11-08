@@ -11,9 +11,9 @@
         $list = array(
             'id' => $row['ID'],
             'Title' => $row["Title"],
-            'Resume' => $row["Resume"],
+            'Resume' => utf8_encode($row["Resume"]),
             'Picture' => $row['Picture'],
-            'all' => $row['Hole_text']
+            'all' => utf8_encode($row['Hole_text'])
         );
     }
     echo json_encode($list);

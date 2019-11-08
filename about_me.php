@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>About me</title>
-    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -11,7 +11,7 @@
         <h1>Portfolio</h1>
     </Header>
     <div class="topnav">
-        <a href="homepage.php">Home</a>
+        <a href="Homepage.php">Home</a>
         <a href="projekter.php">Projekter</a>
         <a href="#about me" class="active">About Me</a>
     </div>

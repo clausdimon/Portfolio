@@ -40,7 +40,7 @@ header {
 }
 .columv2 {
     float:left;
-    width: 48%;
+    width: 46%;
     padding:1%;
     border:0px;
 }
@@ -88,4 +88,10 @@ a.download {
     border: 3px darkred dashed;
     padding: 2px;
     margin: 5px;
+}
+.container {
+    border: 5px solid blue;
+    margin: 5px;
+    height: 300px;
+    overflow: auto;
 }

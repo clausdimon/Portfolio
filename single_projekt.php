@@ -12,9 +12,9 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
     $list = array(
         'id' => $row['ID'],
         'Title' => $row["Title"],
-        'Resume' => $row["Resume"],
+        'Resume' => utf8_encode($row["Resume"]),
         'Picture' => $row['Picture'],
-        'all' => $row['Hole_text']
+        'all' => utf8_encode($row['Hole_text'])
     );
 }
 ?>
@@ -22,7 +22,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 <html lang="en">
 <head>
     <title>Single Projekt</title>
-    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>

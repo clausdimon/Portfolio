@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Projekter</title>
-    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -11,7 +11,7 @@
         <h1>Portfolio</h1>
     </Header>
     <div class="topnav">
-        <a href="homepage.php">Home</a>
+        <a href="Homepage.php">Home</a>
         <a href="#projekter" class="active">Projekter</a>
         <a href="about_me.php">About Me</a>
     </div>
@@ -20,7 +20,28 @@
         <h2 class="overskrift">Projekter</h2>
     </div>
     <div class="row" id="projekter">
-        
+        <?php
+        require("mysqlconnect.php");
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        if ($conn->connect_error) {
+            die("Connection failed;" . $conn->connect_error);
+        }
+        $sql = "SELECT*FROM portfolio_projekter";
+        $result = $conn->query($sql);
+        $list = array();
+        while($row=$result->fetch_assoc()){
+        echo "<div class=\"columv2 container\">";
+            echo "<div class=\"columv2\">";
+                echo "<img src=\"".$row['Picture']."\">";
+            echo "</div>";
+            echo "<div class=\"columv2\">";
+                echo "<h1>".$row['Title']."</h1>";
+                echo "<p>".utf8_encode($row['Resume'])."</p>";
+                echo "<a href=\"single_projekt.php?ID=".$row['ID']."\" target=\"_blank\">det hele</a>";
+            echo "</div>";
+        echo "</div>"; 
+        }
+        ?>
     </div>
     <footer>
         <div class="row">
@@ -40,7 +61,7 @@
             </div>
         </div>
     </footer>
-    <script>
+    <!-- <script>
         var xmlhttp = new XMLHttpRequest();
         var myObj, x;
         xmlhttp.onreadystatechange = function() {
@@ -80,6 +101,6 @@
         };
         xmlhttp.open("GET","all_projekts.php",true);
         xmlhttp.send();
-    </script>
+    </script> -->
 </body>
 </html>

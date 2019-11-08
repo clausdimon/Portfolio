@@ -8,14 +8,14 @@
     $result = $conn->query($sql);
     $list = array();
     while($row=$result->fetch_assoc()){
-        $list[] = $row; 
-            /* 'id' => $row['ID'],
-            'Title' => $row['Title'],
-            'Resume' => $row['Resume'],
-            'Picture' => $row['Picture'],
-            'all' => $row['Hole_text']     */
-        //)
-    //);
+     echo "<div class=\"row\">";
+        echo "<div class=\"columv2\">";
+            echo "<img src=\"".$row['Picture']."\">";
+        echo "</div>";
+        echo "<div class=\"columv2\">";
+            echo "<h1>".$row['Title']."</h1>";
+            echo "<p>".$row['Resume']."</p>";
+            echo "<a href=\"single_projekt.php?ID=".$row['ID']."\" target=\"_blank\">det hele</a>";
+    echo "</div>"; 
     }
-    echo json_encode($list);
 ?>
