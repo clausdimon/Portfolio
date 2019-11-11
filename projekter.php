@@ -12,12 +12,12 @@
     </Header>
     <div class="topnav">
         <a href="Homepage.php">Home</a>
-        <a href="#projekter" class="active">Projekter</a>
+        <a href="#projekter" class="active">Projects</a>
         <a href="about_me.php">About Me</a>
     </div>
     <br>
     <div>
-        <h2 class="overskrift">Projekter</h2>
+        <h2 class="overskrift">Projects</h2>
     </div>
     <div class="row" id="projekter">
         <?php
@@ -31,8 +31,8 @@
         $list = array();
         while($row=$result->fetch_assoc()){
         echo "<div class=\"columv2 container\">";
-            echo "<div class=\"columv2\">";
-                echo "<img src=\"".$row['Picture']."\">";
+            echo "<div class=\"columv2\" style=\"text-align:center;\">";
+                echo "<img src=\"".$row['Picture']."\" style=\"width:95%;\">";
             echo "</div>";
             echo "<div class=\"columv2\">";
                 echo "<h1>".$row['Title']."</h1>";
@@ -47,17 +47,19 @@
         <div class="row">
             <div class="colum">
                 <p><b>Made by</b>: Claus Dimon</p>
+            </div>
+            <div class="colum">
+                <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+45 81 75 44 02</a></p>
+            </div>
+            <div class="colum">
+                <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
+            </div>
+            <div class="colum">
                 <p>&copy;<?php
                     $fromYear = 2019; 
                     $thisYear = (int)date('Y'); 
                     echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio
                 </p>
-            </div>
-            <div class="colum">
-                <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+4581754402</a></p>
-            </div>
-            <div class="colum">
-                <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
             </div>
         </div>
     </footer>

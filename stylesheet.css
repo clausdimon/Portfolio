@@ -1,4 +1,18 @@
 /*makes a topnav as a link place to links to other sites*/
+body {
+    background-color:rgba(0, 128, 64, 0.9);
+    background-image: radial-gradient(black,rgba(0, 128, 64, 0.9), green);
+    color: palegoldenrod;
+}
+a:link {
+    color: blanchedalmond;
+}
+a:visited {
+    color:royalblue;
+}
+a:hover {
+    color: gold;
+}
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -27,9 +41,12 @@
     background-color:#4caf50;
 }
 header {
+    background-color: darkolivegreen;
+    color: chartreuse;
     text-align: center;
     width: 100%;
     display: inline-block;
+    font-size: 3em;
 }
 /* makes colems a certain size*/
 .colum {
@@ -53,18 +70,19 @@ header {
 img {
     width: 40%;
     height: auto;
+    text-align: center;
 
 }
 .title {
     width: 100%;
-    color:blue;
     font-size:2em;
 }
 .overskrift {
     text-align: center;
     width: 100%;
     display: inline-block;
-    color: cadetblue;
+    color: ghostwhite;
+    font-size: 2em;
 }
 .picture_side {
     float: left;
@@ -90,8 +108,18 @@ a.download {
     margin: 5px;
 }
 .container {
-    border: 5px solid blue;
+    border: 5px solid rgba(0, 0, 255, 0.856);
     margin: 5px;
     height: 300px;
     overflow: auto;
 }
+.row {
+    padding: 5px;
+}
+@media only screen and (max-width:768px) {
+    /*For Mobile Phones and Tablets: */
+    .colum {width: 95%;}
+    .columv2 { width: 95%;}
+}
+
+

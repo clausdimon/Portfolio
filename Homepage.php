@@ -15,7 +15,7 @@ require("mysqlconnect.php");
     </Header>
     <div class="topnav">
         <a href="#home" class="active">Home</a>
-        <a href="projekter.php">Projekter</a>
+        <a href="projekter.php">Projects</a>
         <a href="about_me.php">About Me</a>
     </div>
     <br>
@@ -26,21 +26,27 @@ require("mysqlconnect.php");
         <div class="colum">
             <div>
                 <h3>Info</h3>
-                <p id="infoboks" style="border: 2px solid yellow; padding: 5px; width:95%;"><b>Jeg er</b> <br>
-                - Kreativ i form af at jeg ved der er mere end en løsning.<br>
-                - Ansvarsbevisdst hvor jeg sikre mig at når jeg begynder et projekt bliver det også færdigt. <br>
-                - Mødestabil hvor jeg husker at orientere hvis der sker noget der vil forhindre at man møder op. <br>
-                - En 26-årig mand der brænder for at dygtiggøre og uddanne mig til en programmør. <br>
+                <p id="infoboks" style="border: 2px solid yellow; padding: 5px; width:95%;"><b>I am</b> <br>
+                - Creative in the shape, that I know that there is more than one solution.<br>
+                - Responsible where I will make sure, that when I start a project, I will finish it. <br>
+                - Attending work regularly, and if I am hindered in that, I will give notice. <br>
+                - A 26-year-old man, who is burning to qualify and educate myself to becoming a programmer. <br>
                 </p>
             </div>
         </div>
         <div class="colum">
             <div>
                 <h3>Uddannelse so far</h3>
-                <p id="Uddannelse_so_far" style="border: 2px solid yellow; padding: 5px; width:95%;">lidt om hvad jeg har været igennem</p>
+                <p id="Uddannelse_so_far" style="border: 2px solid yellow; padding: 5px; width:95%;">In the Basic course of the education I learned the basics to programming C# and Asp.net websites,
+                and the basics of Python.
+                Close to the end of the course there was also some lessons about creating and connect to a SQL Database.
+                <br>In the school’s work placement, I have expanded my knowledge in C# and created a few applications 
+                and investigated how to create a website another way than asp.net, which is using HTML, CSS, JavaScript and PHP. 
+                To the extent of creating the website that you’re now on.
+                </p>
             </div>
         </div>
-        <div class="colum">
+        <div class="colum" style="text-align:center;">
             <br>
             <div>
                 <img src="picture/Migselv.jpg" alt="picture/Error.png">
@@ -49,17 +55,17 @@ require("mysqlconnect.php");
     </div>
     <div class="row">
         <div class="colum">
-           <div class="row" id="seneste_projekts" >
+           <div class="row container" id="seneste_projekts" >
            
            </div>
         </div>
         <div class="colum">
-              <div class="row" id="bedste_projekt">
+              <div class="row container" id="bedste_projekt">
 
               </div>
         </div>
         <div class="colum">
-            <div class="row" id="first_projekt">
+            <div class="row container" id="first_projekt">
 
             </div>
         </div>
@@ -68,17 +74,19 @@ require("mysqlconnect.php");
         <div class="row">
             <div class="colum">
                 <p><b>Made by</b>: Claus N. Dimon</p>
+            </div>
+            <div class="colum">
+                <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+45 81 75 44 02</a></p>
+            </div>
+            <div class="colum">
+                <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
+            </div>
+            <div class="colum">
                 <p>&copy;<?php
                     $fromYear = 2019; 
                     $thisYear = (int)date('Y'); 
                     echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio
                 </p>
-            </div>
-            <div class="colum">
-                <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+4581754402</a></p>
-            </div>
-            <div class="colum">
-                <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
             </div>
         </div>
     </footer>
@@ -89,27 +97,21 @@ require("mysqlconnect.php");
             if (this.readyState == 4 && this.status == 200) 
             {
                 myObj = JSON.parse(this.responseText);
-                var divCol = document.createElement("div");
                 var divCol1 = document.createElement("div");
-                divCol.classList.add("columv2");
-                divCol1.classList.add("columv2");
+                divCol1.classList.add("row");
 
                 var titles = document.createElement("h4");
                 titles.classList.add("title");
                 titles.innerHTML = myObj.Title;
                 var resume = document.createElement("p");
                 resume.innerHTML = myObj.Resume;
-                var pic = document.createElement("img");
-                pic.src = myObj.Picture;
                 var link = document.createElement("a");
                 link.href = "single_projekt.php?ID="+ myObj.id;
                 link.innerHTML = "det hele";
                 link.target = "_blank";
-                divCol.appendChild(pic);
                 divCol1.appendChild(titles);
                 divCol1.appendChild(resume);
                 divCol1.appendChild(link);
-                document.getElementById("first_projekt").appendChild(divCol);
                 document.getElementById("first_projekt").appendChild(divCol1);
             }
         };
@@ -124,27 +126,21 @@ require("mysqlconnect.php");
             if (this.readyState == 4 && this.status == 200) 
             {
                 myObj = JSON.parse(this.responseText);
-                var divCol = document.createElement("div");
                 var divCol1 = document.createElement("div");
-                divCol.classList.add("columv2");
-                divCol1.classList.add("columv2");
+                divCol1.classList.add("row");
 
                 var titles = document.createElement("h4");
                 titles.classList.add("title");
                 titles.innerHTML = myObj.Title;
                 var resume = document.createElement("p");
                 resume.innerHTML = myObj.Resume;
-                var pic = document.createElement("img");
-                pic.src = myObj.Picture;
                 var link = document.createElement("a");
                 link.href = "single_projekt.php?ID="+ myObj.id;
                 link.innerHTML = "det hele";
                 link.target = "_blank";
-                divCol.appendChild(pic);
                 divCol1.appendChild(titles);
                 divCol1.appendChild(resume);
                 divCol1.appendChild(link);
-                document.getElementById("bedste_projekt").appendChild(divCol);
                 document.getElementById("bedste_projekt").appendChild(divCol1);
             }
         };
@@ -158,27 +154,21 @@ require("mysqlconnect.php");
             if (this.readyState == 4 && this.status == 200) 
             {
                 myObj = JSON.parse(this.responseText);
-                var divCol = document.createElement("div");
                 var divCol1 = document.createElement("div");
-                divCol.classList.add("columv2");
-                divCol1.classList.add("columv2");
+                divCol1.classList.add("row");
 
                 var titles = document.createElement("h4");
                 titles.classList.add("title");
                 titles.innerHTML = myObj.Title;
                 var resume = document.createElement("p");
                 resume.innerHTML = myObj.Resume;
-                var pic = document.createElement("img");
-                pic.src = myObj.Picture;
                 var link = document.createElement("a");
                 link.href = "single_projekt.php?ID="+ myObj.id;
                 link.innerHTML = "det hele";
                 link.target = "_blank";
-                divCol.appendChild(pic);
                 divCol1.appendChild(titles);
                 divCol1.appendChild(resume);
                 divCol1.appendChild(link);
-                document.getElementById("seneste_projekts").appendChild(divCol);
                 document.getElementById("seneste_projekts").appendChild(divCol1);
             }
         };

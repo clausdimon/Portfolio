@@ -12,7 +12,7 @@
     </Header>
     <div class="topnav">
         <a href="Homepage.php">Home</a>
-        <a href="projekter.php">Projekter</a>
+        <a href="projekter.php">Projects</a>
         <a href="#about me" class="active">About Me</a>
     </div>
     <br>
@@ -21,7 +21,7 @@
     </div>
     <br>
     <div class="row">
-        <div class="picture_side">
+        <div class="picture_side" style="text-align:center;">
             <img src="picture/Migselv.jpg" alt="picture/Error.png" style="width: 75%;">
         </div>
         <div class="text_side">
@@ -45,7 +45,7 @@
     <br>
     <div class="row">
         <div class="picture_side" style="height:200px;">
-            <h3 class="texttitle"><b>available for Hiring</b></h3>
+            <h3 class="texttitle"><b>Available for Hiring</b></h3>
             <p style="text-align: center; display: inline-block; width:100%;"> Yes</p>
         </div>
     </div>
@@ -53,17 +53,19 @@
         <div class="row">
             <div class="colum">
                 <p><b>Made by</b>: Claus N. Dimon</p>
+            </div>
+            <div class="colum">
+                <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+45 81 75 44 02</a></p>
+            </div>
+            <div class="colum">
+                <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
+            </div>
+            <div class="colum">
                 <p>&copy;<?php
                     $fromYear = 2019; 
                     $thisYear = (int)date('Y'); 
                     echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> Portfolio
                 </p>
-            </div>
-            <div class="colum">
-                <p><b>Contact Phonenr</b>: <a href="tel:+4581754402">+4581754402</a></p>
-            </div>
-            <div class="colum">
-                <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
             </div>
         </div>
     </footer>
