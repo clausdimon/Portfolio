@@ -36,7 +36,7 @@ require("mysqlconnect.php");
         </div>
         <div class="colum">
             <div>
-                <h3>Uddannelse so far</h3>
+                <h3>Education so far</h3>
                 <p id="Uddannelse_so_far" style="border: 2px solid yellow; padding: 5px; width:95%;">In the Basic course of the education I learned the basics to programming C# and Asp.net websites,
                 and the basics of Python.
                 Close to the end of the course there was also some lessons about creating and connect to a SQL Database.
