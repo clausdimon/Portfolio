@@ -30,6 +30,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
     <Header>
         <h1 id="title"><?php echo $list['Title'];?></h1>
     </Header>
+    <hr>
     <br>
     <div>
         <img src="<?php echo $list['Picture'];?>" alt="picture not found" id="picture">
