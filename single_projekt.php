@@ -48,9 +48,6 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
                 <p><b>Contact Phonenr</b>: <a href="tel:+45 81 75 44 02">+45 81 75 44 02</a></p>
             </div>
             <div class="colum">
-                <p><b>Contact email</b>: <a href="mailto:Claus.n.dimon@live.dk">Claus.n.dimon@live.dk</a></p>
-            </div>
-            <div class="colum">
                 <p>&copy;<?php
                     $fromYear = 2019; 
                     $thisYear = (int)date('Y'); 

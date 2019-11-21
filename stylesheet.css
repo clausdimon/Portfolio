@@ -3,7 +3,9 @@ body {
     background-color:rgba(0, 128, 64, 0.9);
     background-image: radial-gradient(black,rgba(0, 128, 64, 0.9), green);
     color: palegoldenrod;
+    font-family: Arial, Helvetica, sans-serif;
 }
+* {box-sizing: border-box;}
 a:link {
     color: blanchedalmond;
 }
@@ -125,7 +127,8 @@ hr {
     border-color: #333;
     border-style: solid;
     border-width: 25px;
-} 
+}
+
 @media only screen and (max-width:768px) {
     /*For Mobile Phones and Tablets: */
     .colum {width: 95%;}
